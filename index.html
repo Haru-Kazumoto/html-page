@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @keyframes spin-slow-medium {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-medium {
+            animation: spin-slow-medium 6s linear infinite;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="grid grid-cols-3">
-            <div class="border border-1 m-2 p-4">
-                mala bau
-            </div>
-            <div class="border border-1 m-2 p-4">
-                mala bau
-            </div>
-            <div class="border border-1 m-2 p-4">
-                mala bau
-            </div>
+
+<body class="h-[100dvh]">
+    <div class="grid grid-cols-1 md:grid-cols-3 h-full">
+        <div class="flex flex-col items-center justify-center gap-2 col-span-1 md:col-span-3 text-center">
+            <img src="/nopalexe.jpeg" alt="" class="w-60 h-60 object-cover rounded-full animate-spin-medium" />
+            <span class="text-2xl font-semibold">
+                WASPADA SOSOK ANOMALI BANI SALEH
+            </span>
         </div>
+
     </div>
 </body>
+
+
 </html>
